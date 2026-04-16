@@ -1,4 +1,5 @@
 # Dependencies
+.minimax/
 node_modules/
 .pnp/
 .pnp.js
