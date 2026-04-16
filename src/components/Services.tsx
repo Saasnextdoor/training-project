@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Palette, Bot, FileText, Zap, Code, Brain } from 'lucide-react'
+import { Palette, Bot, FileText, Zap, Code, Brain, Search, Users, BarChart3 } from 'lucide-react'
 
 const services = [
   {
@@ -41,6 +41,24 @@ const services = [
     title: 'Генерация изображений',
     description: 'Создаём уникальные картинки, иконки, баннеры без фотостоков и стоковых решений.',
     gradient: 'from-indigo-500/20 to-violet-500/20',
+  },
+  {
+    icon: Search,
+    title: 'AI-аналитика',
+    description: 'Анализируем данные, находим инсайты и паттерны. Превращаем сырые данные в понятные выводы.',
+    gradient: 'from-blue-500/20 to-indigo-500/20',
+  },
+  {
+    icon: Users,
+    title: 'Персонализация',
+    description: 'Персонализируем опыт для каждого пользователя. Рекомендации, которые повышают конверсию.',
+    gradient: 'from-purple-500/20 to-pink-500/20',
+  },
+  {
+    icon: BarChart3,
+    title: 'AI-отчёты',
+    description: 'Генерируем автоматические отчёты с визуализациями. Экономим часы ручной работы.',
+    gradient: 'from-teal-500/20 to-cyan-500/20',
   },
 ]
 
