@@ -24,9 +24,7 @@ export default function Header() {
   }, [])
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'glass py-3' : 'py-5 bg-transparent'
       }`}
@@ -101,6 +99,6 @@ export default function Header() {
           </nav>
         </motion.div>
       )}
-    </motion.header>
+    </header>
   )
 }
