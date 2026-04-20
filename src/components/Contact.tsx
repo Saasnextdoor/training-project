@@ -36,11 +36,26 @@ export default function Contact() {
       return
     }
 
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    setSubmitted(true)
-    setIsSubmitting(false)
-    setFormState({ name: '', email: '', project: '', message: '' })
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit')
+      }
+
+      setSubmitted(true)
+      setFormState({ name: '', email: '', project: '', message: '' })
+    } catch (err) {
+      setError('Ошибка при отправке. Попробуйте позже.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
